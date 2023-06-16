@@ -13,7 +13,7 @@ export default function NavBar() {
       <h1 className='nav-logo'>Muhammad.dev</h1>
       <ul className='nav-links'>
         {list.map((item, index) => (
-          <li key={index} onMouseOver={() => handleHover(index)}>
+          <li className='nav-link' key={index} onMouseOver={() => handleHover(index)}>
             <p>{item}</p>
             <div className='border-bottom' style={{ width: hoverIndex === index ? '100%' : '0' }}></div>
           </li>
