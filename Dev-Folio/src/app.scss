@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
-$primary-color: #550000;
+$primary-color: #3182CE;
 $secondary-color: #ffffff;
+$home-background: #010710;
 
 $bgspan1: #4fc3dc;
 $bgspan2: #ff2d75;
@@ -13,8 +15,8 @@ $bgspan3: #ff8c42;
 }
 
 body {
-  font-family: 'Inder', sans-serif;
-  background-color: #dbdbdb;
+  font-family: 'Fira Code', 'Inder', sans-serif;
+  background-color: #10083f;
   width: 100vw;
   height: 400vh;
   overflow-x: hidden;
@@ -36,20 +38,29 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.nav-bar {
+.nav-conatiner {
   position: fixed;
-  top: 0;
+  left: 50%;
   z-index: 100;
-  width: 100%;
-  margin: 0px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  z-index: 99;
+  transform: translateX(-50%);
+  backdrop-filter: blur(8px);
+}
+
+.nav-bar {
+  // top: 0;
+  margin: 0 auto;
   background-color: transparent;
   color: $secondary-color;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-  padding: 0 1rem;
+  // padding: 0 1rem;
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 1280px;
+  margin: 0 auto;
 
   .nav-links{
     display: flex;
@@ -64,22 +75,45 @@ body {
       margin-left: 1rem;
       padding-right: 22px;
       cursor: pointer;
+      font-weight: 600;
+    }
+
+    .light-mode-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      list-style: none;
+      margin-left: 1rem;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-weight: 600;
+      color: $secondary-color;
+      border: 1px solid white;
+    }
+
+    .light-mode-btn:hover {
+      color: $home-background;
+      border: 1px solid $secondary-color;
+      background-color: $secondary-color;
     }
 
     li:hover {
-      color: $secondary-color;
+      color: $primary-color;
     }
+
   }
 
   .nav-logo {
     cursor: pointer;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 600;
     color: $secondary-color;
   }
 
   .nav-logo:hover {
-    color: lighten($secondary-color, 10%);
+    color: $primary-color;
   }
 }
 
@@ -91,80 +125,6 @@ body {
   background-color: $secondary-color;
   transition: all 0.3s ease-in-out;
 }
-
-.home-div{
-  height: 100vh;
-  width: 100%;
-  background-color: $primary-color;
-
-  .home-about {
-    position: absolute;
-    top: 20vh;
-    left: 15vw;
-    width: 300px;
-    height: 200px;
-    padding: 2rem 1rem;
-    margin: 2rem 0;
-    background-color: $secondary-color;
-    box-shadow: -1px 6px 7px rgba(0, 0, 0, 0.2);
-
-    h1 {
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .home-text {
-      background-color: $primary-color;
-      color: $secondary-color;
-      position: absolute;
-      padding: 20px;
-      top: 33%;
-      left: 0%;
-      box-shadow: -1px 6px 7px rgba(0, 0, 0, 0.2);
-
-      h3 {
-        font-size: 1.2rem;
-        font-weight: 500;
-        margin-bottom: 1rem;
-      }
-
-      .home-icons {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 1rem;
-        width: 80px;
-
-        .home-icon {
-          color: $secondary-color;
-          font-size: 1.2rem;
-          cursor: pointer;
-          transition: all 0.3s ease-in-out;
-          z-index: 3;
-        }
-
-        .white {
-          position: absolute;
-          background-color: $secondary-color;
-          width: 30px;
-          height: 30px;
-          z-index: 0;
-        }
-
-        .white.circle {
-          border-radius: 50%;
-          position: absolute;
-          left: 70px;
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
-  }
-}
-
 
 /* width */
 ::-webkit-scrollbar {
@@ -191,9 +151,10 @@ body {
   padding: 0;
   box-sizing: border-box;
   min-height: 100vh;
-  min-width: 100vh;
-  background-color: #0c192c;
-  position: relative;
+  min-width: 100vw;
+  background-color: $home-background;
+  z-index: -1;
+  position: absolute;
   overflow: hidden;
 
   .bubbles {
@@ -230,4 +191,22 @@ body {
       }
     }
   }
+}
+
+.home-div {
+  color: $secondary-color;
+
+  p {
+    color: $primary-color;
+  }
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }

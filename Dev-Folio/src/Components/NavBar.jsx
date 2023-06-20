@@ -13,8 +13,9 @@ export default function NavBar() {
   };
 
   return (
+    <div className='nav-conatiner'>
     <nav className='nav-bar'>
-      <h1 className='nav-logo'>Muhammad.dev</h1>
+      <h1 className='nav-logo'>muhammad.ali</h1>
       <ul className='nav-links'>
         {list.map((item, index) => (
           <li className='nav-link' key={index} onMouseOver={() => handleHover(index)} onMouseOut={handleOff}>
@@ -22,7 +23,9 @@ export default function NavBar() {
             <div className='border-bottom' style={{ width: hoverIndex === index ? '100%' : '0' }}></div>
           </li>
         ))}
+        <button className='light-mode-btn'>Light Mode</button>
       </ul>
     </nav>
+    </div>
   );
 }

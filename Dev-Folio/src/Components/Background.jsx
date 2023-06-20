@@ -12,7 +12,9 @@ export default function Background() {
     if (width < 501) {
       return 10;
     } else if (width < 800) {
-      return 20;
+      return 16;
+    } else if (width < 1000) {
+      return 23;
     } else if (width < 1200) {
       return 30;
     } else {
