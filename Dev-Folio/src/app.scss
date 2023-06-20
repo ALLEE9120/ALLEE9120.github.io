@@ -7,7 +7,7 @@ $home-background: #010710;
 
 $bgspan1: #4fc3dc;
 $bgspan1Dark: darken($bgspan1, 44);
-$bgspan2: #ff8c42;
+$bgspan2: #dc4f79;
 $bgspan2Dark: darken($bgspan2, 44);
 $bgspan3: #ff8c42;
 $bgspan3Dark: darken($bgspan3, 44);
@@ -191,19 +191,19 @@ body {
         box-shadow: 0 0 0 10px $bgspan2Dark,
         0 0 50px $bgspan2,
         0 0 100px $bgspan2;
-        animation: animate2 20s linear infinite;
+        animation: animate2 25s linear infinite;
         animation-duration:  calc(120s / var(--i));
       }
     }
     @keyframes animate {
       0% {
-        transform: translateY(400vh) scale(0);
+        transform: translateY(400vh) scale(0.2);
         rotate: 0deg;
         opacity: 1;
       }
       100% {
         transform: translateY(-10vh) scale(1);
-        rotate: 30deg;
+        rotate: 20deg;
       }
     }
 
@@ -215,7 +215,7 @@ body {
       }
       100% {
         transform: translateY(-10vh) scale(1);
-        rotate: -30deg;
+        rotate: -20deg;
       }
     }
   }
