@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function NavBar() {
   const [hoverIndex, setHoverIndex] = useState(null);
-  const [list] = useState(['Home', 'About', 'Projects', 'Contact']);
+  const [list] = useState(['.tools()', '.projects()', '.contact()']);
 
   const handleHover = (index) => {
     setHoverIndex(index);
@@ -23,7 +23,7 @@ export default function NavBar() {
             <div className='border-bottom' style={{ width: hoverIndex === index ? '100%' : '0' }}></div>
           </li>
         ))}
-        <button className='light-mode-btn'>Light Mode</button>
+        <button className='light-mode-btn'>.lightMode()</button>
       </ul>
     </nav>
     </div>
