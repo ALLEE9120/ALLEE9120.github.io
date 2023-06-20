@@ -10,7 +10,6 @@ export default function ToolsPage() {
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
-    background: '#010710',
   }
 
   const skillDivStyle = {
@@ -49,8 +48,8 @@ export default function ToolsPage() {
               <div className="backend-list">
                 <ul>
                   <li>Ruby on Rails</li>
+                  <li>NodeJS</li>
                   <li>Sql</li>
-                  <li>Python</li>
                 </ul>
               </div>
             </div>

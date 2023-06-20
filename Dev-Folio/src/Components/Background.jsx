@@ -10,15 +10,15 @@ export default function Background() {
   function screenToBubble() {
     const width = window.innerWidth;
     if (width < 501) {
-      return 10;
+      return 11;
     } else if (width < 800) {
-      return 16;
+      return 18;
     } else if (width < 1000) {
-      return 23;
+      return 25;
     } else if (width < 1200) {
-      return 30;
+      return 33;
     } else {
-      return 40;
+      return 45;
     }
   }
 
