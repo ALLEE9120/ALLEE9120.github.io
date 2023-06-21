@@ -13,9 +13,7 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
   };
 
   const handleOff = () => {
-    setTimeout(() => {
       setHoverIndex(null);
-    }, 1000);
   };
 
   const handleClickList = (index) => {
