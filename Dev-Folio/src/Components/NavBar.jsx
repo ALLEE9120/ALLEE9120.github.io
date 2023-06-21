@@ -47,6 +47,14 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
     });
   }
 
+  const handleHoverLightMode = () => {
+    setLightModeHover(true);
+  }
+
+  const handleLightModeOff = () => {
+    setLightModeHover(false);
+  }
+
   const handleScroll = () => {
     setWindowPositionT(window.scrollY);
   }
@@ -81,7 +89,7 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
               <div className='border-bottom' style={{ width: checkWindowPosition(index) ? '100%' : (hoverIndex === index ? '100%' : '0'), backgroundColor: color}}></div>
             </li>
           ))}
-          <button style={lightModeStyle} className='light-mode-btn' onClick={onHandleChangeMode}>{lightMode? '.darkMode()': '.lightMode()'}</button>
+          <button style={lightModeStyle} className='light-mode-btn' onClick={onHandleChangeMode} onMouseOver={handleHoverLightMode} onMouseOut={handleLightModeOff}>{lightMode? '.darkMode()': '.lightMode()'}</button>
         </ul>
       </nav>
     </div>
