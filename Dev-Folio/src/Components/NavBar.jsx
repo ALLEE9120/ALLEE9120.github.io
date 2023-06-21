@@ -26,8 +26,8 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
   };
 
   const lightModeStyle = {
-    backgroundColor: color,
-    color: bgColor,
+    backgroundColor: lightModeHover ? bgColor : color,
+    color: lightModeHover ? color : bgColor,
     border: `1px solid ${color}`,
     width: '141px'
   }
@@ -65,7 +65,10 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
     } else {
       return false;
     }
+  }
 
+  const navConatinerStyle = {
+    backgroundColor: 'transparent',
   }
 
   useEffect(() => {
@@ -75,7 +78,7 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
   }, [windowPositionT]);
 
   return (
-    <div className='nav-conatiner'>
+    <div className='nav-conatiner' style={navConatinerStyle}>
       <nav className='nav-bar' style={{color: color}}>
         <h1 className='nav-logo'
          style={{color: logoHover ? '#3182CE' : color}}
@@ -84,7 +87,15 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
          onClick={handleLogoClick}> muhammad.ali</h1>
         <ul className='nav-links'>
           {list.map((item, index) => (
-            <li className='nav-link' key={index} style={{color: checkWindowPosition(index) && '#3182CE' }} onMouseOver={() => handleHover(index)} onMouseOut={handleOff} onClick={() => handleClickList(index)}>
+            <li
+              className='nav-link'
+              key={index}
+              style={{
+                color: checkWindowPosition(index) && '#3182CE'
+              }}
+              onMouseOver={() => handleHover(index)}
+              onMouseOut={handleOff} onClick={() => handleClickList(index)}
+            >
               <p>{item}</p>
               <div className='border-bottom' style={{ width: checkWindowPosition(index) ? '100%' : (hoverIndex === index ? '100%' : '0'), backgroundColor: color}}></div>
             </li>

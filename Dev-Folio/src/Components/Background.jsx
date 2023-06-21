@@ -42,7 +42,10 @@ export default function Background({color, bgColor}) {
     <div className="background-container" style={{color: color, backgroundColor: bgColor}}>
       <div className="bubbles">
         {array.map((item, index) => (
-          <span key={index} style={{'--i': getRandomNumber(1, 30)}}></span>
+          <span key={index} style={{
+            '--i': getRandomNumber(1, 30),
+            backgroundColor: color === '#010710' && (index % 2 === 0 ?  '#4fc3dc' : '#dc4f79' ) ,
+            boxShadow: color === '#010710' && (index % 2 === 0 ?  '0 0 0 10px #bcf3ff, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc' : '0 0 0 10px #ffc3d5, 0 0 50px #dc4f79, 0 0 100px #dc4f79' ) }}></span>
         ))}
       </div>
 
