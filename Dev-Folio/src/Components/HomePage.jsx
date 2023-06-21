@@ -1,5 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-export default function HomePage() {
+import PropTypes from 'prop-types'
+
+export default function HomePage({color}) {
   const divStyle ={
     position: 'absolute',
     top: '30%',
@@ -11,6 +13,7 @@ export default function HomePage() {
     fontSize: '4rem',
     fontWeight: 'bold',
     marginBottom: '1rem',
+    color: color,
   }
 
   const pStyle = {
@@ -25,4 +28,8 @@ export default function HomePage() {
       <p style={pStyle}>I'm a Front-End Web Developer and an automotive fnatic </p>
     </div>
   )
+}
+
+HomePage.propTypes = {
+  color: PropTypes.string,
 }

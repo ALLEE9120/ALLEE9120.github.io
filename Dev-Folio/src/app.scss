@@ -19,7 +19,7 @@ $bgspan3Dark: darken($bgspan3, 44);
 
 body {
   font-family: 'Fira Code', 'Inder', sans-serif;
-  background-color: #10083f;
+  background-color: $home-background;
   width: 100vw;
   height: 400vh;
   overflow-x: hidden;
@@ -95,7 +95,6 @@ body {
       cursor: pointer;
       font-weight: 600;
       color: $secondary-color;
-      border: 1px solid white;
     }
 
     .light-mode-btn:hover {
@@ -112,7 +111,7 @@ body {
 
   .nav-logo {
     cursor: pointer;
-    font-size: 22px;
+    font-size: 27px;
     font-weight: 600;
     color: $secondary-color;
   }

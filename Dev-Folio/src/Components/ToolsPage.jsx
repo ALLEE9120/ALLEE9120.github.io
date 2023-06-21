@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
+import PropTypes from 'prop-types'
 
-export default function ToolsPage() {
+export default function ToolsPage({color}) {
   const toolDivStyle = {
     width: '100vw',
     height: '100vh',
@@ -23,6 +24,10 @@ export default function ToolsPage() {
     width: '80vw',
   }
 
+  const colorChange = {
+    color: color,
+  }
+
   return (
     <div className="tools-div" style={toolDivStyle}>
       <div className="tools-body" style={bodyStyle}>
@@ -34,12 +39,12 @@ export default function ToolsPage() {
             <h1 className="frontend-title">Front-End Technology</h1>
             <div className="frontend-list">
               <ul>
-                <li>ReactJS</li>
-                <li>JavaScript</li>
-                <li>SCSS/SASS</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Styled Components</li>
+                <li  style={colorChange}>ReactJS</li>
+                <li  style={colorChange}>JavaScript</li>
+                <li  style={colorChange}>SCSS/SASS</li>
+                <li  style={colorChange}>HTML</li>
+                <li  style={colorChange}>CSS</li>
+                <li  style={colorChange}>Styled Components</li>
               </ul>
             </div>
           </div>
@@ -47,9 +52,9 @@ export default function ToolsPage() {
               <h1 className="backend-title">Back-End Technology</h1>
               <div className="backend-list">
                 <ul>
-                  <li>Ruby on Rails</li>
-                  <li>NodeJS</li>
-                  <li>MySQL</li>
+                  <li  style={colorChange}>Ruby on Rails</li>
+                  <li  style={colorChange}>NodeJS</li>
+                  <li  style={colorChange}>MySQL</li>
                 </ul>
               </div>
             </div>
@@ -57,12 +62,12 @@ export default function ToolsPage() {
               <h1 className="other-title">Other</h1>
               <div className="other-list">
                 <ul>
-                  <li>Git</li>
-                  <li>GitHub</li>
-                  <li>Heroku</li>
-                  <li>Vite</li>
-                  <li>VS Code</li>
-                  <li>SQLite</li>
+                  <li  style={colorChange}>Git</li>
+                  <li  style={colorChange}>GitHub</li>
+                  <li  style={colorChange}>Heroku</li>
+                  <li  style={colorChange}>Vite</li>
+                  <li  style={colorChange}>VS Code</li>
+                  <li  style={colorChange}>SQLite</li>
                 </ul>
             </div>
           </div>
@@ -73,4 +78,8 @@ export default function ToolsPage() {
       </div>
     </div>
   )
+}
+
+ToolsPage.propTypes = {
+  color: PropTypes.string,
 }

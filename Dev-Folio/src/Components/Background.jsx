@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-export default function Background() {
+export default function Background({color, bgColor}) {
   const [bubbleSize, setBubbleSize] = useState(screenToBubble());
 
   const getRandomNumber = (min, max) => {
@@ -38,7 +39,7 @@ export default function Background() {
   const array = Array.from({ length: bubbleSize }, (_, index) => index + 1);
 
   return (
-    <div className="background-container">
+    <div className="background-container" style={{color: color, backgroundColor: bgColor}}>
       <div className="bubbles">
         {array.map((item, index) => (
           <span key={index} style={{'--i': getRandomNumber(1, 30)}}></span>
@@ -47,4 +48,9 @@ export default function Background() {
 
     </div>
   )
+}
+
+Background.propTypes = {
+  color: PropTypes.string,
+  bgColor: PropTypes.string,
 }
