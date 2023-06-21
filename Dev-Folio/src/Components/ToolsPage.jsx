@@ -49,7 +49,7 @@ export default function ToolsPage() {
                 <ul>
                   <li>Ruby on Rails</li>
                   <li>NodeJS</li>
-                  <li>Sql</li>
+                  <li>MySQL</li>
                 </ul>
               </div>
             </div>
