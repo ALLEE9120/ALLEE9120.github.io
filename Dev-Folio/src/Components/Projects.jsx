@@ -36,8 +36,8 @@ export default function Projects({color, bgColor}) {
             <div className="frontend-list">
               <img src="https://www.colesclassroom.com/wp-content/uploads/2020/03/white-and-red-cherry-blossom-flowers-3979186.jpg" alt="TripItEasy" />
               <p>Travel App that allows users to create trips and add activities to their trips. Users can also view other users trips and activities.</p>
-              <a href="www.google.com">Demo</a>
-              <a href="www.google.com">Github</a>
+              <a href="https://tripiteasy.herokuapp.com/">Demo</a>
+              <a href="https://github.com/chiara-muller/TripItEasy">Github</a>
               </div>
           </div>
         </div>
