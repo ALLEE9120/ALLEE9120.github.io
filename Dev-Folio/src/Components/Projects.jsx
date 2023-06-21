@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import PropTypes from 'prop-types'
 
-export default function Projects({color, bgColor}) {
+export default function Projects({color}) {
   const toolDivStyle = {
     width: '100vw',
     height: '100vh',
