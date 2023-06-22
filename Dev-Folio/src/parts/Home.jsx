@@ -4,6 +4,7 @@ import HomePage from "../Components/HomePage"
 import NavBar from "../Components/NavBar"
 import ToolsPage from "../Components/ToolsPage"
 import Projects from "../Components/Projects"
+import Contact from "../Components/Contact"
 
 export default function Home() {
   let [lightMode, setLightMode] = useState(false);
@@ -31,6 +32,7 @@ export default function Home() {
       <HomePage bgColor={bgColor} color={color}/>
       <ToolsPage bgColor={bgColor} color={color}/>
       <Projects bgColor={bgColor} color={color}/>
+      <Contact bgColor={bgColor} color={color}/>
     </div>
   )
 }

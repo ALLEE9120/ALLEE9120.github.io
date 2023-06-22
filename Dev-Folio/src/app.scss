@@ -21,7 +21,7 @@ body {
   font-family: 'Fira Code', 'Inder', sans-serif;
   background-color: $home-background;
   width: 100vw;
-  height: 400vh;
+  height: 500vh;
   overflow-x: hidden;
 }
 
@@ -153,7 +153,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  min-height: 400vh;
+  min-height: 500vh;
   min-width: 100vw;
   background-color: $home-background;
   z-index: -1;
@@ -367,4 +367,21 @@ button, input[type="submit"], input[type="reset"] {
   font-size: 1.3rem;
   font-weight: 600;
   margin: 1.2rem 0;
+}
+
+.contact-div {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 200vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #3182CE;
+
+  .contact-body {
+    position: relative;
+    top: 15vh;
+    width: 80vw;
+  }
 }
