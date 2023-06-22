@@ -1,17 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import PropTypes from 'prop-types'
+import { FaGithub, FaLink } from 'react-icons/fa'
 
 export default function Projects({color}) {
   const toolDivStyle = {
     color: color,
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'column',
   }
 
   const skillDivStyle = {
     display: 'flex',
-    justifyContent: 'space-evenly',
   }
 
   const bodyStyle = {
@@ -26,14 +23,28 @@ export default function Projects({color}) {
         <div className="projects-title top">
           <h1>&lt;div id='projects'&gt;</h1>
         </div>
-        <div className="skills-div" style={skillDivStyle}>
-          <div className="project">
-            <h1 className="project-title">TripItEasy</h1>
-            <div className="project-list">
-              <img src="https://www.colesclassroom.com/wp-content/uploads/2020/03/white-and-red-cherry-blossom-flowers-3979186.jpg" alt="TripItEasy" />
-              <p>Travel App that allows users to create trips and add activities to their trips. Users can also view other users trips and activities.</p>
-              <a href="https://tripiteasy.herokuapp.com/">Demo</a>
-              <a href="https://github.com/chiara-muller/TripItEasy">Github</a>
+          <div className="allinfo-div" style={skillDivStyle}>
+            <div className="project">
+              <div className="project-list">
+                <h1 className="project-title">TripItEasy</h1>
+                <p>Mobile travel web app that simplifies users experience to create trips and add activities to their trips.</p>
+                <div className="project-stack">
+                  <h2 className='gray'>// Tech Stack</h2>
+                  <ul>
+                    <li>Ruby on Rails</li>
+                    <li>Javascript</li>
+                    <li>BootStrap</li>
+                    <li>SCSS</li>
+                    <li>SQLite</li>
+                    <li>Google Maps API</li>
+                    <li>Heroku</li>
+                  </ul>
+                </div>
+                <h2 className='gray'>// See it in action</h2>
+                <div className="project-links">
+                  <a className={'Demo'} href="https://tripiteasy.herokuapp.com/">Visit Site <FaLink style={{marginLeft: '20px'}}/></a>
+                  <a className={'Code'} href="https://github.com/chiara-muller/TripItEasy">See the code<FaGithub style={{marginLeft: '20px'}}/></a>
+                </div>
               </div>
           </div>
         </div>
