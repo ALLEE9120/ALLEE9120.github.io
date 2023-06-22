@@ -274,3 +274,36 @@ button, input[type="submit"], input[type="reset"] {
     }
   }
 }
+
+.projects-div {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 100vh;
+  margin-top: 10vh;
+
+  .projects-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: relative;
+    color: $primary-color;
+
+    &.top {
+      top: -5vh;
+    }
+
+    &.bottom {
+      bottom: 0vh;
+    }
+  }
+
+  .project-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: relative;
+    color: $secondary-color;
+  }
+
+}
