@@ -1,6 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
+import PropTypes from 'prop-types'
 
-
-export default function Contact({color, bgColor}) {
+export default function Contact({color}) {
   const divStyle = {
     color: color,
   }
@@ -17,4 +18,9 @@ export default function Contact({color, bgColor}) {
       </div>
     </div>
   )
+}
+
+Contact.propTypes = {
+  color: PropTypes.string,
+  bgColor: PropTypes.string,
 }
