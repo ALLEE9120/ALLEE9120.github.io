@@ -3,10 +3,25 @@
 import PropTypes from 'prop-types'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
-export default function Contact({color}) {
+export default function Contact({color, bgColor}) {
   const divStyle = {
     color: color,
   }
+
+  const formStyle = {
+    color: color,
+    border: `2px solid ${color}`,
+  }
+
+  const inputStyle = {
+    border: `1px solid ${color}`,
+    backgroundColor: bgColor,
+  }
+
+  const placeholderStyles = {
+    color: color,
+  };
+
   return (
     <div className="contact-div" style={divStyle}>
       <div className="contact-body">
@@ -23,10 +38,10 @@ export default function Contact({color}) {
               <a href="" className="social-link"><FaLinkedin style={{marginRight: '20px', fontSize: '30px', color: color}} /></a>
             </div>
           </div>
-          <form className='contact-form'>
-            <input type="text" id="name" name="name" placeholder='Name'></input>
-            <input type="text" id="email" name="email" placeholder='Email'></input>
-            <textarea type="text" id="message" name="message" placeholder='Message'></textarea>
+          <form className='contact-form' style={formStyle}>
+            <input type="text" id="name" name="name" placeholder='Name' style={inputStyle}></input>
+            <input type="text" id="email" name="email" placeholder='Email' style={inputStyle}></input>
+            <textarea type="text" id="message" name="message" placeholder='Message' style={inputStyle}></textarea>
             <input type="submit" className='submit' value="Send"></input>
           </form>
         </div>
