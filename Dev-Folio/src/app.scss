@@ -373,7 +373,7 @@ button, input[type="submit"], input[type="reset"] {
   width: 100vw;
   height: 100vh;
   position: relative;
-  top: 200vh;
+  top: 180vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -395,7 +395,69 @@ button, input[type="submit"], input[type="reset"] {
       }
 
       &.bottom {
-        bottom: 0vh;
+        bottom: -10vh;
+      }
+    }
+
+    .contact-container{
+      display: flex;
+
+      .contact-left {
+        margin-left: 2rem;
+        width: 50%;
+
+        h1 {
+          font-size: 2.5rem;
+          font-weight: 600;
+          margin: 40px 0px;
+        }
+
+        p {
+          font-size: 1.2rem;
+          margin-bottom: 50px;
+          display: flex;
+        }
+
+        .gray {
+          color: gray;
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: 0 2rem;
+        border: 2px solid $secondary-color;
+        border-radius: 2px;
+        padding: 30px;
+        max-width: 600px;
+
+        input, textarea {
+          border: 1px solid darken($secondary-color, 20%);
+          padding: 10px;
+          margin-bottom: 1rem;
+          background-color: $home-background;
+          color: $secondary-color;
+          font-size: 1.2rem;
+
+          &:focus {
+            outline: none;
+            border: 1px solid $primary-color;
+          }
+
+          &::placeholder {
+            color: $secondary-color;
+          }
+        }
+
+
+        #message {
+          height: 200px;
+        }
       }
     }
   }
