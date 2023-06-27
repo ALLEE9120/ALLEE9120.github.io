@@ -18,9 +18,6 @@ export default function Contact({color, bgColor}) {
     backgroundColor: bgColor,
   }
 
-  const placeholderStyles = {
-    color: color,
-  };
 
   return (
     <div className="contact-div" style={divStyle}>

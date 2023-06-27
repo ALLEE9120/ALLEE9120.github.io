@@ -8,8 +8,8 @@
 body {
   font-family: "Fira Code", "Inder", sans-serif;
   background-color: #010710;
-  width: 100vw;
   height: 500vh;
+  height: 500svh;
   overflow-x: hidden;
 }
 
@@ -305,7 +305,7 @@ button, input[type=submit], input[type=reset] {
   width: 100vw;
   height: 100vh;
   position: relative;
-  top: 200vh;
+  top: 180vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -326,5 +326,59 @@ button, input[type=submit], input[type=reset] {
   top: -5vh;
 }
 .contact-div .contact-body .contact-title.bottom {
-  bottom: -30vh;
+  bottom: -10vh;
+}
+.contact-div .contact-body .contact-container {
+  display: flex;
+}
+.contact-div .contact-body .contact-container .contact-left {
+  margin-left: 2rem;
+  width: 50%;
+}
+.contact-div .contact-body .contact-container .contact-left h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 40px 0px;
+}
+.contact-div .contact-body .contact-container .contact-left p {
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  display: flex;
+}
+.contact-div .contact-body .contact-container .contact-left .gray {
+  color: gray;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.contact-div .contact-body .contact-container .contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 2rem;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  padding: 30px;
+  max-width: 600px;
+}
+.contact-div .contact-body .contact-container .contact-form input, .contact-div .contact-body .contact-container .contact-form textarea {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  margin-bottom: 1rem;
+  background-color: #010710;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+.contact-div .contact-body .contact-container .contact-form input:focus, .contact-div .contact-body .contact-container .contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #3182CE;
+}
+.contact-div .contact-body .contact-container .contact-form input::-moz-placeholder, .contact-div .contact-body .contact-container .contact-form textarea::-moz-placeholder {
+  color: #ffffff;
+}
+.contact-div .contact-body .contact-container .contact-form input::placeholder, .contact-div .contact-body .contact-container .contact-form textarea::placeholder {
+  color: #ffffff;
+}
+.contact-div .contact-body .contact-container .contact-form #message {
+  height: 200px;
 }/*# sourceMappingURL=app.css.map */

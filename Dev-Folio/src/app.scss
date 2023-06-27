@@ -20,8 +20,8 @@ $bgspan3Dark: darken($bgspan3, 44);
 body {
   font-family: 'Fira Code', 'Inder', sans-serif;
   background-color: $home-background;
-  width: 100vw;
   height: 500vh;
+  height: 500svh;
   overflow-x: hidden;
 }
 
