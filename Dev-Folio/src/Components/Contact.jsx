@@ -36,18 +36,16 @@ export default function Contact({color, bgColor}) {
     position: 'absolute',
     top: '8px',
     zIndex: '0',
-    transition: 'all 0.1s ease-in-out',
+    transition: 'all 0.5s ease-in-out',
   }
 
   const submitStyle = {
     border: `1px solid ${color}`,
-    backgroundColor: 'transparent',
     zIndex: '10',
     width: '100%',
-    marginTop: '20px',
     padding: '10px',
     cursor: 'pointer',
-    transition: 'all 0.1s ease-in-out',
+    transition: 'all 0.5s ease-in-out',
     color: color,
     backgroundColor: bgColor,
   }
@@ -78,6 +76,22 @@ export default function Contact({color, bgColor}) {
     e.target.style.color = color
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    alert('Thank you for your message!')
+    const form = e.target
+    const inputs = form.querySelectorAll('input')
+    const textarea = form.querySelector('textarea')
+    inputs.forEach(input => {
+      if (input.type !== 'submit') {
+        input.value = ''
+        input.previousSibling.style.opacity = '1'
+        textarea.value = ''
+        textarea.previousSibling.style.opacity = '1'
+      }
+
+    })
+  }
 
   return (
     <div className="contact-div" style={divStyle}>
@@ -95,7 +109,7 @@ export default function Contact({color, bgColor}) {
               <a href="" className="social-link"><FaLinkedin style={{marginRight: '20px', fontSize: '30px', color: color}} /></a>
             </div>
           </div>
-          <form className='contact-form' style={formStyle}>
+          <form className='contact-form' style={formStyle}  onSubmit={handleSubmit}>
             {array.map((item, index) => {
               return (
                 <div style={divStyle2} key={index}>

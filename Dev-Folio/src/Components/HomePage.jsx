@@ -25,7 +25,7 @@ export default function HomePage({color}) {
   return (
     <div style={divStyle} className="home-div">
       <h1 style={h1Style}>Hello, I'm Muhammad 👋</h1>
-      <p style={pStyle}>I'm a Front-End Web Developer and an automotive fnatic </p>
+      <p style={pStyle}>I'm a Front-End Web Developer and an automotive fanatic </p>
     </div>
   )
 }

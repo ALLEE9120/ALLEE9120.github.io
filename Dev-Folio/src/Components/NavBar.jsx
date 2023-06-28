@@ -67,6 +67,7 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
 
   const navConatinerStyle = {
     backgroundColor: 'transparent',
+    transition: 'all 0.5s ease-in-out',
   }
 
   useEffect(() => {
