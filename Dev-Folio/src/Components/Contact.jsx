@@ -2,6 +2,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import PropTypes from 'prop-types'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { useRef } from 'react'
+import emailjs from 'emailjs-com';
 
 export default function Contact({color, bgColor}) {
   const array = ['Name', 'Email']
@@ -77,21 +79,63 @@ export default function Contact({color, bgColor}) {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    alert('Thank you for your message!')
-    const form = e.target
-    const inputs = form.querySelectorAll('input')
-    const textarea = form.querySelector('textarea')
-    inputs.forEach(input => {
-      if (input.type !== 'submit') {
-        input.value = ''
-        input.previousSibling.style.opacity = '1'
-        textarea.value = ''
-        textarea.previousSibling.style.opacity = '1'
-      }
+    e.preventDefault();
 
-    })
-  }
+    const form = e.target;
+
+    emailjs.sendForm('service_wn0moae', 'template_qoabhmp', form, 'N2SIozkNfMSTZXMWo')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+
+  };
+
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   const name = e.target.children[0].children[1].value;
+  //   const email = e.target.children[1].children[1].value;
+  //   const message = e.target.children[2].children[1].value;
+
+    // try {
+    //   const response = await fetch('https://api.elasticemail.com/v2/email/send/apikey=407FF155B752D81908B8B08C64FB34AC12C4109910C2FE1404BE347B5D9B8F317B8317E590510BDFFBFBFB2079C54635', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({
+    //       msgfrom: 'ma.dev.folio@gmail.com',
+    //       msgfromName: 'Your Name',
+    //       msgto: '791600ali@gmail.com',
+    //       subject: 'Contact Form Submission',
+    //       bodyText: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    //     }),
+    //   });
+
+    //   const data = await response.json();
+    //   console.log('Email sent successfully!', data);
+    //   // Additional logic after successful email submission
+    // } catch (error) {
+    //   console.error('Error sending email:', error);
+    //   // Error handling logic
+    // }
+
+  //   const form = e.target;
+  //   const inputs = form.querySelectorAll('input');
+  //   const textarea = form.querySelector('textarea');
+  //   inputs.forEach((input) => {
+  //     if (input.type !== 'submit') {
+  //       input.value = '';
+  //       input.previousSibling.style.opacity = '1';
+  //       textarea.value = '';
+  //       textarea.previousSibling.style.opacity = '1';
+  //     }
+  //   });
+  // };
+
 
   return (
     <div className="contact-div" style={divStyle}>
