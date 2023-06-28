@@ -86,8 +86,21 @@ export default function Contact({color, bgColor}) {
     emailjs.sendForm('service_wn0moae', 'template_qoabhmp', form, 'N2SIozkNfMSTZXMWo')
       .then((result) => {
           console.log(result.text);
+          alert('Message Sent, I will get back to you shortly', result.text);
       }, (error) => {
           console.log(error.text);
+          alert('An error occurred, Please try again', error.text);
+      });
+
+      const inputs = form.querySelectorAll('input');
+      const textarea = form.querySelector('textarea');
+      inputs.forEach((input) => {
+        if (input.type !== 'submit') {
+          input.value = '';
+          input.previousSibling.style.opacity = '1';
+          textarea.value = '';
+          textarea.previousSibling.style.opacity = '1';
+        }
       });
 
 
@@ -122,19 +135,6 @@ export default function Contact({color, bgColor}) {
     //   console.error('Error sending email:', error);
     //   // Error handling logic
     // }
-
-  //   const form = e.target;
-  //   const inputs = form.querySelectorAll('input');
-  //   const textarea = form.querySelector('textarea');
-  //   inputs.forEach((input) => {
-  //     if (input.type !== 'submit') {
-  //       input.value = '';
-  //       input.previousSibling.style.opacity = '1';
-  //       textarea.value = '';
-  //       textarea.previousSibling.style.opacity = '1';
-  //     }
-  //   });
-  // };
 
 
   return (
