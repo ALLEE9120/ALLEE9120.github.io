@@ -3,7 +3,9 @@
 import PropTypes from 'prop-types'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
-export default function Contact({color}) {
+export default function Contact({color, bgColor}) {
+  const array = ['Name', 'Email']
+
   const divStyle = {
     color: color,
   }
@@ -20,6 +22,11 @@ export default function Contact({color}) {
     width: '100%',
   }
 
+  const divStyle2 = {
+    position: 'relative',
+    width: '100%',
+  }
+
   const spanStyle = {
     color: color,
     marginLeft: '12px',
@@ -32,10 +39,19 @@ export default function Contact({color}) {
     transition: 'all 0.1s ease-in-out',
   }
 
-  const divStyle2 = {
-    position: 'relative',
+  const submitStyle = {
+    border: `1px solid ${color}`,
+    backgroundColor: 'transparent',
+    zIndex: '10',
     width: '100%',
+    marginTop: '20px',
+    padding: '10px',
+    cursor: 'pointer',
+    transition: 'all 0.1s ease-in-out',
+    color: color,
+    backgroundColor: bgColor,
   }
+
 
   const handleSpanRemoval = (e) => {
     const span = e.target.previousSibling
@@ -52,19 +68,15 @@ export default function Contact({color}) {
     input.focus()
   }
 
-  const submitStyle = {
-    border: `1px solid ${color}`,
-    backgroundColor: 'transparent',
-    zIndex: '10',
-    width: '100%',
-    marginTop: '20px',
-    padding: '10px',
-    cursor: 'pointer',
-    transition: 'all 0.1s ease-in-out',
+  const handleHover = (e) => {
+    e.target.style.backgroundColor = color
+    e.target.style.color = bgColor
   }
 
-  const array = ['Name', 'Email']
-
+  const handleHoverOut = (e) => {
+    e.target.style.backgroundColor = bgColor
+    e.target.style.color = color
+  }
 
 
   return (
@@ -97,7 +109,7 @@ export default function Contact({color}) {
               <textarea type="text" id='message' name='message' style={inputStyle} onChange={handleSpanRemoval}></textarea>
               </div>
             <div style={divStyle2}>
-              <input type="submit" value="Submit" style={submitStyle}></input>
+              <input type="submit" value="Submit" style={submitStyle} onMouseOver={handleHover} onMouseOut={handleHoverOut}></input>
             </div>
           </form>
         </div>
