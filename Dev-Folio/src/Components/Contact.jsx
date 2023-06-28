@@ -2,7 +2,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import PropTypes from 'prop-types'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { useRef } from 'react'
 import emailjs from 'emailjs-com';
 
 export default function Contact({color, bgColor}) {
