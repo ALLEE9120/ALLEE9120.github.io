@@ -61,6 +61,7 @@ body {
 .nav-conatiner {
   height: 90px;
   position: fixed;
+  left: 0;
   width: 100%;
   z-index: 11;
   background-color: rgba(0, 0, 0, 0.2);
@@ -68,7 +69,8 @@ body {
 }
 
 .nav-bar {
-  max-width: 1260px;
+  margin: 0px auto;
+  max-width: 1229px;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -225,10 +227,11 @@ body {
 
 .home-div {
   min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
+  position: absolute;
 
   .home-content {
     padding: 90px 0;
@@ -239,52 +242,71 @@ body {
   }
 }
 
-.tools-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+.tools-div {
+  min-height: 100vh;
+  min-width: 100vw;
   position: relative;
-  color: $primary-color;
+  top: 100vh;
 
-  &.top {
-    top: -3vh;
+  .tools-body {
+    position: relative;
+    top: 110px
   }
 
-  &.bottom {
-    bottom: 0vh;
-  }
-}
 
-.skills-div {
-  .card {
-    padding: 1.5rem;
-    width: 300px;
+  .tools-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: relative;
+    color: $primary-color;
 
-    h1 {
-      color: $primary-color;
-      font-size: 1.5rem;
+    &.top {
+      top: -3vh;
     }
 
-    div {
-      margin-top: 30px;
-      li {
-        color: $secondary-color;
-        font-size: 1.2rem;
-        margin-bottom: 1.9rem;
-        display: flex;
+    &.bottom {
+      bottom: 0vh;
+    }
+  }
+
+
+  .skills-div {
+    display: flex;
+    padding-top: 30px;
+    padding-left: 60px;
+    padding-bottom: 30px;
+
+
+    .card {
+      width: 30%;
+
+      h1 {
+        color: $primary-color;
+        font-size: 1.5rem;
+      }
+
+      div {
+        margin-top: 30px;
+        li {
+          color: $secondary-color;
+          font-size: 1.2rem;
+          margin-bottom: 1.9rem;
+          display: flex;
+        }
       }
     }
   }
 }
 
+
 .projects-div {
-  width: 100vw;
   min-height: 100vh;
+  min-width: 100vw;
   position: relative;
   top: 100vh;
   margin-top: 10vh;
   display: flex;
-  align-items: center;
   flex-direction: column;
 
   .projects-title {
@@ -312,6 +334,7 @@ body {
   }
 
   .allinfo-div{
+    margin-left: 60px;
     p {
       color: $secondary-color;
       font-size: 1.2rem;
@@ -376,12 +399,12 @@ input,textarea, div {
 }
 
 .contact-div {
-  width: 100vw;
   min-height: 100vh;
+  min-width: 100vw;
   position: relative;
-  top: 130vh;
+  top: 117vh;
+  margin-top: 10vh;
   display: flex;
-  align-items: center;
   flex-direction: column;
 
   .contact-body {

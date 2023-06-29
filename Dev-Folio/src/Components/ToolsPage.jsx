@@ -3,25 +3,13 @@ import PropTypes from 'prop-types'
 
 export default function ToolsPage({color}) {
   const toolDivStyle = {
-    width: '100vw',
-    height: '100vh',
-    position: 'relative',
-    top: '100vh',
-    color: 'white',
+    color: color,
     display: 'flex',
-    alignItems: 'center',
     flexDirection: 'column',
-  }
-
-  const skillDivStyle = {
-    display: 'flex',
-    justifyContent: 'space-evenly',
   }
 
   const bodyStyle = {
     position: 'relative',
-    top: '15vh',
-    width: '80vw',
   }
 
   const colorChange = {
@@ -34,7 +22,7 @@ export default function ToolsPage({color}) {
         <div className="tools-title top">
           <h1>&lt;div id='tools'&gt;</h1>
         </div>
-        <div className="skills-div" style={skillDivStyle}>
+        <div className="skills-div">
           <div className="card frontend">
             <h1 className="frontend-title">Front-End Technology</h1>
             <div className="frontend-list">
