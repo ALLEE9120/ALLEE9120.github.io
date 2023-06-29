@@ -47,7 +47,7 @@ export default function ToolsPage({color}) {
               </div>
             </div>
             <div className="card other">
-              <h1 className="other-title">Other</h1>
+              <h1 className="other-title">Other Technologies</h1>
               <div className="other-list">
                 <ul>
                   <li  style={colorChange}>Git</li>

@@ -244,7 +244,7 @@ body {
 
 .tools-div {
   min-height: 100vh;
-  min-width: 100vw;
+  width: 100%;
   position: relative;
   top: 100vh;
 
@@ -279,7 +279,9 @@ body {
 
 
     .card {
-      width: 30%;
+      width: 33.3%;
+      display: flex;
+      flex-direction: column;
 
       h1 {
         color: $primary-color;
@@ -414,18 +416,13 @@ input,textarea, div {
 
 .contact-div {
   min-height: 100vh;
-  min-width: 100vw;
+  width: 100%;
   position: relative;
-  top: 110vh;
-  margin-top: 10vh;
+  top: 100vh;
+  margin-top: 160px;
   display: flex;
   flex-direction: column;
-
-  .contact-body {
-    position: relative;
-    top: 15vh;
-    width: 80vw;
-    padding: 60px 0;
+  padding: 60px 0;
 
     .contact-title {
       font-size: 1.3rem;
@@ -506,7 +503,6 @@ input,textarea, div {
         }
       }
     }
-  }
 }
 
 @media screen and (max-width: 768px) {

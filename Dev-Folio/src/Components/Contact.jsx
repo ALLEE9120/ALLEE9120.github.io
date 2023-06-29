@@ -138,41 +138,39 @@ export default function Contact({color, bgColor}) {
 
   return (
     <div className="contact-div" style={divStyle}>
-      <div className="contact-body">
-        <div className="contact-title top">
-          <h1>&lt;div id='contact'&gt;</h1>
-        </div>
-        <div className="contact-container">
-          <div className='contact-left'>
-            <h1>Get in touch</h1>
-            <p>Feel free to reach out to me for any questions or just to say hi!</p>
-            <div className="socials">
-              <h2 className='gray'>// socials</h2>
-              <a href="https://github.com/ALLEE9120" className="social-link"><FaGithub style={{marginRight: '20px', fontSize: '30px', color: color}}  /></a>
-              <a href="https://www.linkedin.com/in/mo-ar/" className="social-link"><FaLinkedin style={{marginRight: '20px', fontSize: '30px', color: color}} /></a>
-            </div>
+      <div className="contact-title top">
+        <h1>&lt;div id='contact'&gt;</h1>
+      </div>
+      <div className="contact-container">
+        <div className='contact-left'>
+          <h1>Get in touch</h1>
+          <p>Feel free to reach out to me for any questions or just to say hi!</p>
+          <div className="socials">
+            <h2 className='gray'>// socials</h2>
+            <a href="https://github.com/ALLEE9120" className="social-link"><FaGithub style={{marginRight: '20px', fontSize: '30px', color: color}}  /></a>
+            <a href="https://www.linkedin.com/in/mo-ar/" className="social-link"><FaLinkedin style={{marginRight: '20px', fontSize: '30px', color: color}} /></a>
           </div>
-          <form className='contact-form' style={formStyle}  onSubmit={handleSubmit}>
-            {array.map((item, index) => {
-              return (
-                <div style={divStyle2} key={index}>
-                  <span style={spanStyle} onClick={handleSpanCLick}>{item}</span>
-                  <input type="text" id={item} name={item} style={inputStyle} onChange={handleSpanRemoval}></input>
-                </div>
-              )
-            })}
-            <div style={divStyle2}>
-              <span style={spanStyle} onClick={handleSpanCLick}>Message</span>
-              <textarea type="text" id='message' name='message' style={inputStyle} onChange={handleSpanRemoval}></textarea>
+        </div>
+        <form className='contact-form' style={formStyle}  onSubmit={handleSubmit}>
+          {array.map((item, index) => {
+            return (
+              <div style={divStyle2} key={index}>
+                <span style={spanStyle} onClick={handleSpanCLick}>{item}</span>
+                <input type="text" id={item} name={item} style={inputStyle} onChange={handleSpanRemoval}></input>
               </div>
-            <div style={divStyle2}>
-              <input type="submit" value="Submit" style={submitStyle} onMouseOver={handleHover} onMouseOut={handleHoverOut}></input>
+            )
+          })}
+          <div style={divStyle2}>
+            <span style={spanStyle} onClick={handleSpanCLick}>Message</span>
+            <textarea type="text" id='message' name='message' style={inputStyle} onChange={handleSpanRemoval}></textarea>
             </div>
-          </form>
-        </div>
-        <div className="contact-title bottom">
-          <h1>&lt;/div&gt;</h1>
-        </div>
+          <div style={divStyle2}>
+            <input type="submit" value="Submit" style={submitStyle} onMouseOver={handleHover} onMouseOut={handleHoverOut}></input>
+          </div>
+        </form>
+      </div>
+      <div className="contact-title bottom">
+        <h1>&lt;/div&gt;</h1>
       </div>
     </div>
   )

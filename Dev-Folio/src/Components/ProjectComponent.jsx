@@ -19,10 +19,6 @@ export default function ProjectComponent({color, title, description, techStack, 
     setHover(null)
   }
 
-
-
-
-
   return (
     <div className="allinfo-div" style={skillDivStyle}>
       <h1 className="project-title">{title}</h1>

@@ -3,18 +3,8 @@ import PropTypes from 'prop-types'
 import ProjectComponent from './ProjectComponent'
 
 export default function Projects({color, bgColor}) {
-  const toolDivStyle = {
-    color: color,
-  }
-
-  const bodyStyle = {
-    position: 'relative',
-    top: '15vh',
-    width: '80vw',
-  }
-
   return (
-    <div className="projects-div" style={toolDivStyle}>
+    <div className="projects-div">
       <div className="projects-title top">
         <h1>&lt;div id='projects'&gt;</h1>
       </div>
