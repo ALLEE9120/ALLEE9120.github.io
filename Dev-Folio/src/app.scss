@@ -402,7 +402,7 @@ input,textarea, div {
   min-height: 100vh;
   min-width: 100vw;
   position: relative;
-  top: 117vh;
+  top: 110vh;
   margin-top: 10vh;
   display: flex;
   flex-direction: column;
@@ -411,6 +411,7 @@ input,textarea, div {
     position: relative;
     top: 15vh;
     width: 80vw;
+    padding: 60px 0;
 
     .contact-title {
       font-size: 1.3rem;
@@ -420,7 +421,7 @@ input,textarea, div {
       color: $primary-color;
 
       &.top {
-        top: -5vh;
+        top: -8vh;
       }
 
       &.bottom {
@@ -432,7 +433,7 @@ input,textarea, div {
       display: flex;
 
       .contact-left {
-        margin-left: 2rem;
+        margin-left: 60px;
         width: 50%;
 
         h1 {
