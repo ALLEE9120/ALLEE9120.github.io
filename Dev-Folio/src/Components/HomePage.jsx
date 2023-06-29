@@ -3,10 +3,6 @@ import PropTypes from 'prop-types'
 
 export default function HomePage({color}) {
   const divStyle ={
-    position: 'absolute',
-    top: '30%',
-    left: '19%',
-    transform: 'translateX(-19%)'
   }
 
   const h1Style = {
@@ -24,8 +20,10 @@ export default function HomePage({color}) {
 
   return (
     <div style={divStyle} className="home-div">
-      <h1 style={h1Style}>Hello, I'm Muhammad 👋</h1>
-      <p style={pStyle}>I'm a Front-End Web Developer and an automotive fanatic </p>
+      <div className='home-content'>
+        <h1 style={h1Style}>Hello, I'm Muhammad 👋</h1>
+        <p style={pStyle}>I'm a Front-End Web Developer and an automotive fanatic </p>
+      </div>
     </div>
   )
 }

@@ -148,8 +148,8 @@ export default function Contact({color, bgColor}) {
             <p>Feel free to reach out to me for any questions or just to say hi!</p>
             <div className="socials">
               <h2 className='gray'>// socials</h2>
-              <a href="" className="social-link"><FaGithub style={{marginRight: '20px', fontSize: '30px', color: color}}  /></a>
-              <a href="" className="social-link"><FaLinkedin style={{marginRight: '20px', fontSize: '30px', color: color}} /></a>
+              <a href="https://github.com/ALLEE9120" className="social-link"><FaGithub style={{marginRight: '20px', fontSize: '30px', color: color}}  /></a>
+              <a href="https://www.linkedin.com/in/mo-ar/" className="social-link"><FaLinkedin style={{marginRight: '20px', fontSize: '30px', color: color}} /></a>
             </div>
           </div>
           <form className='contact-form' style={formStyle}  onSubmit={handleSubmit}>
