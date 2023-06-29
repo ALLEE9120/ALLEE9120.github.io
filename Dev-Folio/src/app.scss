@@ -302,10 +302,10 @@ body {
 
 .projects-div {
   min-height: 100vh;
-  min-width: 100vw;
+  width: 100%;
   position: relative;
   top: 100vh;
-  margin-top: 10vh;
+  margin-top: 170px;
   display: flex;
   flex-direction: column;
 
@@ -333,15 +333,29 @@ body {
     color: $primary-color;
   }
 
-  .allinfo-div{
-    margin-left: 60px;
-    p {
-      color: $secondary-color;
-      font-size: 1.2rem;
-      margin-bottom: 1.9rem;
+    .allinfo-div{
+      padding-left: 60px;
+      width: 100%;
       display: flex;
-    }
+      flex-direction: column;
+      p {
+        color: $secondary-color;
+        font-size: 1.2rem;
+        margin-bottom: 1.9rem;
+        display: flex;
+        width: 100%;
+        letter-spacing: 1px;
+      }
+
+      .project {
+        width: 100%;
+
+        .project-list {
+          width: 100%;
+        }
+      }
   }
+
 
   .project-stack {
     font-size: 1.2rem;
