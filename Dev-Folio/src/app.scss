@@ -262,11 +262,11 @@ body {
     color: $primary-color;
 
     &.top {
-      top: -3vh;
+      top:  -20px;;
     }
 
     &.bottom {
-      bottom: 0vh;
+      bottom: 0px;
     }
   }
 
@@ -317,11 +317,11 @@ body {
     color: $primary-color;
 
     &.top {
-      top: -5vh;
+      top: -60px;
     }
 
     &.bottom {
-      bottom: 0vh;
+      bottom: 0px;
     }
   }
 
@@ -421,11 +421,11 @@ input,textarea, div {
       color: $primary-color;
 
       &.top {
-        top: -8vh;
+        top: -60px;
       }
 
       &.bottom {
-        bottom: -10vh;
+        bottom: -60px;
       }
     }
 
