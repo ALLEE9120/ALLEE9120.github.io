@@ -122,7 +122,7 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
         { showMenu &&
         <div className='find-div'>
           <div>
-            <p onClick={handleHide} style={{color: 'white'}}>.close()</p>
+            <p onClick={handleHide}>.close()</p>
           </div>
           <ul className='find-links'>
             {list.map((item, index) => (
@@ -130,7 +130,7 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
                 className='find-link'
                 key={index}
                 style={{
-                  color: checkWindowPosition(index) ? '#3182CE' : 'white'
+                  color: checkWindowPosition(index) && '#3182CE'
                 }}
                 onMouseOver={() => handleHover(index)}
                 onMouseOut={handleOff} onClick={() => handleClickList(index)}
