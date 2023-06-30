@@ -8,6 +8,7 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
   const [windowPositionT, setWindowPositionT] = useState(0);
   const [lightModeHover, setLightModeHover] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [showMenu, setShowMenu] = useState(false);
 
   const handleHover = (index) => {
     setHoverIndex(index);
@@ -28,7 +29,6 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
     backgroundColor: lightModeHover ? bgColor : color,
     color: lightModeHover ? color : bgColor,
     border: `1px solid ${color}`,
-    width: '141px'
   }
 
   const handleHoverLogo = () => {
@@ -66,6 +66,14 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
     }
   }
 
+  const handleMenu = () => {
+    setShowMenu(true);
+  }
+
+  const handleHide = () => {
+    setShowMenu(false);
+  }
+
   const navConatinerStyle = {
     backgroundColor: 'transparent',
     transition: 'all 0.5s ease-in-out',
@@ -82,14 +90,16 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
 
   return (
     <div className='nav-conatiner' style={navConatinerStyle}>
-      <nav className='nav-bar' style={{color: color}}>
+      <find className='nav-bar' style={{color: color}}>
         <h1 className='nav-logo'
          style={{color: logoHover ? '#3182CE' : color}}
          onMouseOver={handleHoverLogo}
          onMouseOut={handleLogoOff}
          onClick={handleLogoClick}> muhammad.ali</h1>
-         { windowWidth < 768 ?
-         <button>|||</button> :
+         { windowWidth < 993 ?
+         <button className='nav-find'
+         onClick={handleMenu}
+         >.find()</button> :
         <ul className='nav-links'>
           {list.map((item, index) => (
             <li
@@ -108,7 +118,31 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
           <button style={lightModeStyle} className='light-mode-btn' onClick={onHandleChangeMode} onMouseOver={handleHoverLightMode} onMouseOut={handleLightModeOff}>{lightMode? '.darkMode()': '.lightMode()'}</button>
         </ul>
         }
-      </nav>
+        { showMenu &&
+        <div className='find-div'>
+          <div>
+            <p onClick={handleHide}>.close()</p>
+          </div>
+          <ul className='find-links'>
+            {list.map((item, index) => (
+              <li
+                className='find-link'
+                key={index}
+                style={{
+                  color: checkWindowPosition(index) && '#3182CE'
+                }}
+                onMouseOver={() => handleHover(index)}
+                onMouseOut={handleOff} onClick={() => handleClickList(index)}
+              >
+                <p>{item}</p>
+                <div className='border-bottom' style={{ width: checkWindowPosition(index) ? '100%' : (hoverIndex === index ? '100%' : '0'), backgroundColor: color}}></div>
+              </li>
+            ))}
+            <button style={lightModeStyle} onClick={onHandleChangeMode} onMouseOver={handleHoverLightMode} onMouseOut={handleLightModeOff}>{lightMode? '.darkMode()': '.lightMode()'}</button>
+          </ul>
+        </div>
+        }
+      </find>
     </div>
   );
 }

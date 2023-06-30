@@ -424,6 +424,69 @@ input, textarea, div {
   height: 200px;
 }
 
+.nav-find {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.2rem 0;
+  position: relative;
+}
+
+.find-div {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1.95rem 1.45rem;
+}
+.find-div div {
+  flex-grow: 1;
+  display: flex;
+  align-items: baseline;
+}
+.find-div div p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  position: relative;
+  cursor: pointer;
+}
+.find-div div p:hover {
+  color: #3182CE;
+}
+.find-div ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+.find-div ul li {
+  list-style: none;
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.find-div ul li:hover {
+  color: #3182CE;
+}
+.find-div ul button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  height: 40px;
+  padding: 0 1rem;
+}
+.find-div ul button:hover {
+  color: #3182CE;
+}
+
 @media screen and (max-width: 768px) {
   .contact-div .contact-body .contact-container {
     flex-direction: column;

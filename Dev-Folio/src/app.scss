@@ -507,6 +507,78 @@ input,textarea, div {
     }
 }
 
+.nav-find {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.2rem 0;
+  position: relative;
+}
+
+.find-div {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1.95rem 1.45rem;
+
+  div {
+    flex-grow: 1;
+    display: flex;
+    align-items: baseline;
+
+    p {
+      font-size: 1.4rem;
+      font-weight: 700;
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+
+    li {
+      list-style: none;
+      margin: 1rem 0;
+      font-size: 1.4rem;
+      font-weight: 700;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      font-size: 1.4rem;
+      font-weight: 700;
+      cursor: pointer;
+      height: 40px;
+      padding: 0 1rem;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   .contact-div {
     .contact-body {
