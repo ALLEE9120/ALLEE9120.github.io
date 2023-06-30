@@ -241,6 +241,7 @@ body {
 
   p {
     color: $primary-color;
+    max-width: 600px;
   }
 }
 
@@ -548,7 +549,7 @@ input,textarea, div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
 
     li {
       list-style: none;
@@ -580,23 +581,40 @@ input,textarea, div {
 
 
 @media screen and (max-width: 768px) {
+  .nav-conatiner {
+    max-width: 100%;
+  }
+
+  .card {
+    width: auto !important;
+    padding-left: 1rem !important;
+  }
+
+  .skills-div {
+    padding-left: 0 !important;
+    flex-wrap: wrap;
+  }
+
+  .allinfo-div {
+    padding-left: 0 !important;
+  }
+
   .contact-div {
-    .contact-body {
-      .contact-container {
-        flex-direction: column;
+    margin-top: 0 !important;
+  }
 
-        .contact-left {
-          width: 100%;
-          margin: 0;
-          padding: 0 2rem;
-        }
+  .contact-container {
+    flex-direction: column;
 
-        .contact-form {
-          width: 100%;
-          margin: 0;
-          padding: 0 2rem;
-        }
-      }
+    .contact-left {
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-bottom: 2rem;
+    }
+
+    .contact-form {
+      width: 85% !important;
+      margin: 0 !important;
     }
   }
 }
