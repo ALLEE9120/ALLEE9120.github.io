@@ -7,6 +7,7 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
   const [list] = useState(['.tools()', '.projects()', '.contact()']);
   const [windowPositionT, setWindowPositionT] = useState(0);
   const [lightModeHover, setLightModeHover] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const handleHover = (index) => {
     setHoverIndex(index);
@@ -72,9 +73,12 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
 
   useEffect(() => {
     console.log(windowPositionT);
+    console.log(windowWidth);
+
 
     window.addEventListener('scroll', handleScroll);
-  }, [windowPositionT]);
+    window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
+  }, [windowPositionT, windowWidth]);
 
   return (
     <div className='nav-conatiner' style={navConatinerStyle}>
@@ -84,6 +88,8 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
          onMouseOver={handleHoverLogo}
          onMouseOut={handleLogoOff}
          onClick={handleLogoClick}> muhammad.ali</h1>
+         { windowWidth < 768 ?
+         <button>|||</button> :
         <ul className='nav-links'>
           {list.map((item, index) => (
             <li
@@ -101,6 +107,7 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
           ))}
           <button style={lightModeStyle} className='light-mode-btn' onClick={onHandleChangeMode} onMouseOver={handleHoverLightMode} onMouseOut={handleLightModeOff}>{lightMode? '.darkMode()': '.lightMode()'}</button>
         </ul>
+        }
       </nav>
     </div>
   );

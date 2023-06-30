@@ -22,21 +22,22 @@ export default function Projects({color, bgColor}) {
         'Google Maps API',
         'Heroku'
         ]}
+        link = {'https://tripiteasy.herokuapp.com/'}
+        githubLink={"https://github.com/chiara-muller/TripItEasy"}
       />
       <ProjectComponent
         color={color}
-        title={'TripItEasy'}
-        description={'Mobile travel web app that simplifies users experience to create trips and add activities to their trips.'}
+        title={'This Portfolio'}
+        description={'Not much to say here! This one just gave me a good excuse to spend a week practicing with React.'}
         bgColor={bgColor}
         techStack={[
-        'Ruby on Rails',
+        'React',
         'Javascript',
-        'BootStrap',
         'SCSS',
-        'SQLite',
-        'Google Maps API',
+        'Vite',
         'Heroku'
         ]}
+        githubLink={"https://github.com/ALLEE9120/Dev-Portfolio"}
       />
       <div className="projects-title bottom">
         <h1>&lt;/div&gt;</h1>

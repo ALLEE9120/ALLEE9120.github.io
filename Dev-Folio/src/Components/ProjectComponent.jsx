@@ -3,7 +3,7 @@ import { FaGithub, FaLink } from 'react-icons/fa'
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 
-export default function ProjectComponent({color, title, description, techStack, bgColor}) {
+export default function ProjectComponent({color, title, description, techStack, bgColor, link, githubLink}) {
   const [hover, setHover] = useState(null)
 
   const skillDivStyle = {
@@ -33,8 +33,8 @@ export default function ProjectComponent({color, title, description, techStack, 
       </div>
       <h2 className='gray'>// See it in action</h2>
        <div className="project-links">
-        <a onMouseOver={handleLinkHover} onMouseOut={handleLinkUnhover} style={{color: hover === 'Demo' ? '#3182CE' : color}} className={'Demo'} href="https://tripiteasy.herokuapp.com/">Visit Site <FaLink style={{marginLeft: '20px'}}/></a>
-        <a onMouseOver={handleLinkHover} onMouseOut={handleLinkUnhover} style={{color: hover === 'Code' ? '#3182CE' : color}} className={'Code'} href="https://github.com/chiara-muller/TripItEasy">See the code<FaGithub style={{marginLeft: '20px'}}/></a>
+        { link && <a onMouseOver={handleLinkHover} onMouseOut={handleLinkUnhover} style={{color: hover === 'Demo' ? '#3182CE' : color}} className={'Demo'} href={link}>Visit Site <FaLink style={{marginLeft: '20px'}}/></a>}
+        { githubLink &&<a onMouseOver={handleLinkHover} onMouseOut={handleLinkUnhover} style={{color: hover === 'Code' ? '#3182CE' : color}} className={'Code'} href={githubLink}>See the code<FaGithub style={{marginLeft: '20px'}}/></a>}
       </div>
     </div>
   )
@@ -46,4 +46,6 @@ ProjectComponent.propTypes = {
   description: PropTypes.string,
   techStack: PropTypes.array,
   bgColor: PropTypes.string,
+  link: PropTypes.string,
+  githubLink: PropTypes.string,
 }
