@@ -23,6 +23,7 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
       top: (index + 1) *  window.innerHeight,
       behavior: 'smooth',
     });
+    setShowMenu(false);
   };
 
   const lightModeStyle = {
@@ -121,7 +122,7 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
         { showMenu &&
         <div className='find-div'>
           <div>
-            <p onClick={handleHide}>.close()</p>
+            <p onClick={handleHide} style={{color: 'white'}}>.close()</p>
           </div>
           <ul className='find-links'>
             {list.map((item, index) => (
@@ -129,7 +130,7 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
                 className='find-link'
                 key={index}
                 style={{
-                  color: checkWindowPosition(index) && '#3182CE'
+                  color: checkWindowPosition(index) ? '#3182CE' : 'white'
                 }}
                 onMouseOver={() => handleHover(index)}
                 onMouseOut={handleOff} onClick={() => handleClickList(index)}
