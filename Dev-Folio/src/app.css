@@ -490,6 +490,10 @@ input, textarea, div {
 }
 
 @media screen and (max-width: 768px) {
+  .background-container {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
   .home-div {
     flex-direction: column;
     align-items: center;
@@ -503,6 +507,7 @@ input, textarea, div {
   }
   .home-div .home-content p {
     font-size: 3rem !important;
+    width: 100% !important;
   }
   .nav-conatiner {
     max-width: 100%;
