@@ -445,17 +445,20 @@ input, textarea, div {
   align-items: flex-end;
   padding: 1.95rem 1.45rem;
   color: white;
+  transition: all 0.3s ease-in-out;
 }
 .find-div div {
   flex-grow: 1;
   display: flex;
   align-items: baseline;
+  transition: all 0.3s ease-in-out;
 }
 .find-div div p {
   font-size: 1.4rem;
   font-weight: 700;
   position: relative;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .find-div div p:hover {
   color: #3182CE;
@@ -465,6 +468,7 @@ input, textarea, div {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  transition: all 0.3s ease-in-out;
 }
 .find-div ul li {
   list-style: none;
