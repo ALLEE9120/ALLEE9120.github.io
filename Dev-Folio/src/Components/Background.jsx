@@ -49,7 +49,6 @@ export default function Background({color, bgColor}) {
             transition: 'all 0.5s ease-in-out', }}></span>
         ))}
       </div>
-
     </div>
   )
 }

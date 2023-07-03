@@ -19,10 +19,45 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
   };
 
   const handleClickList = (index) => {
-    window.scrollTo({
-      top: (index + 1) *  window.innerHeight,
-      behavior: 'smooth',
-    });
+    if (index === 0 || (index === 1 && windowWidth > 769 ))   {
+      window.scrollTo({
+        top: (index + 1) *  window.innerHeight,
+        behavior: 'smooth',
+      });
+    } else if (index === 1 && windowWidth < 612 ) {
+      window.scrollTo({
+        top: (index + 1.70) *  window.innerHeight,
+        behavior: 'smooth',
+      });
+     } else if (index === 1 && windowWidth < 769 ) {
+      window.scrollTo({
+        top: (index + 1.4) *  window.innerHeight,
+        behavior: 'smooth',
+      });
+     } else if (index === 2 && windowWidth < 400 ) {
+      window.scrollTo({
+        top: (index + 2.5) *  window.innerHeight,
+        behavior: 'smooth',
+      });
+     } else if (index === 2 && windowWidth < 612 ) {
+      window.scrollTo({
+        top: (index + 2.8) *  window.innerHeight,
+        behavior: 'smooth',
+      });
+     } else if (index === 2 && windowWidth < 769 ) {
+      window.scrollTo({
+        top: (index + 2.18) *  window.innerHeight,
+        behavior: 'smooth',
+      });
+     } else if (index === 2 && windowWidth > 769 ) {
+      window.scrollTo({
+        top: (index + 2) *  window.innerHeight,
+        behavior: 'smooth',
+      });
+     } else {
+      console.log('error')
+     }
+    console.log(index)
     setShowMenu(false);
   };
 
@@ -82,8 +117,6 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
 
   useEffect(() => {
     console.log(windowPositionT);
-    console.log(windowWidth);
-
 
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
@@ -91,7 +124,7 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
 
   return (
     <div className='nav-conatiner' style={navConatinerStyle}>
-      <find className='nav-bar' style={{color: color}}>
+      <nav className='nav-bar' style={{color: color}}>
         <h1 className='nav-logo'
          style={{color: logoHover ? '#3182CE' : color}}
          onMouseOver={handleHoverLogo}
@@ -143,7 +176,7 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
           </ul>
         </div>
         }
-      </find>
+      </nav>
     </div>
   );
 }
