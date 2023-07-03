@@ -509,6 +509,9 @@ input, textarea, div {
     font-size: 3rem !important;
     width: 100% !important;
   }
+  .tools-div .tools-body .tools-title {
+    font-size: 1.3rem !important;
+  }
   .contact-title {
     margin-bottom: 0 !important;
   }

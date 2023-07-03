@@ -19,47 +19,46 @@ export default function NavBar({lightMode, onHandleChangeMode, color, bgColor}) 
   };
 
   const handleClickList = (index) => {
-    if (index === 0 || (index === 1 && windowWidth > 769 ))   {
-      window.scrollTo({
-        top: (index + 1) *  window.innerHeight,
-        behavior: 'smooth',
-      });
-    } else if (index === 1 && windowWidth < 612 ) {
-      window.scrollTo({
-        top: (index + 1.70) *  window.innerHeight,
-        behavior: 'smooth',
-      });
-     } else if (index === 1 && windowWidth < 769 ) {
-      window.scrollTo({
-        top: (index + 1.4) *  window.innerHeight,
-        behavior: 'smooth',
-      });
-     } else if (index === 2 && windowWidth < 400 ) {
-      window.scrollTo({
-        top: (index + 2.5) *  window.innerHeight,
-        behavior: 'smooth',
-      });
-     } else if (index === 2 && windowWidth < 612 ) {
-      window.scrollTo({
-        top: (index + 2.8) *  window.innerHeight,
-        behavior: 'smooth',
-      });
-     } else if (index === 2 && windowWidth < 769 ) {
-      window.scrollTo({
-        top: (index + 2.18) *  window.innerHeight,
-        behavior: 'smooth',
-      });
-     } else if (index === 2 && windowWidth > 769 ) {
-      window.scrollTo({
-        top: (index + 2) *  window.innerHeight,
-        behavior: 'smooth',
-      });
-     } else {
-      console.log('error')
-     }
-    console.log(index)
+    let scrollOptions = {
+      behavior: 'smooth'
+    };
+
+    switch (index) {
+      case 0:
+        scrollOptions.top = (index + 1) * window.innerHeight;
+        break;
+      case 1:
+        if (windowWidth < 400) {
+          scrollOptions.top = (index + 1.54) * window.innerHeight;
+        } else if (windowWidth < 612) {
+          scrollOptions.top = (index + 1.70) * window.innerHeight;
+        } else if (windowWidth < 769) {
+          scrollOptions.top = (index + 1.4) * window.innerHeight;
+        } else {
+          scrollOptions.top = (index + 1) * window.innerHeight;
+        }
+        break;
+      case 2:
+        if (windowWidth < 400) {
+          scrollOptions.top = (index + 2.5) * window.innerHeight;
+        } else if (windowWidth < 612) {
+          scrollOptions.top = (index + 2.8) * window.innerHeight;
+        } else if (windowWidth < 769) {
+          scrollOptions.top = (index + 2.18) * window.innerHeight;
+        } else {
+          scrollOptions.top = (index + 2) * window.innerHeight;
+        }
+        break;
+      default:
+        console.log('error');
+        return;
+    }
+
+    window.scrollTo(scrollOptions);
+    console.log(index);
     setShowMenu(false);
   };
+
 
   const lightModeStyle = {
     backgroundColor: lightModeHover ? bgColor : color,
