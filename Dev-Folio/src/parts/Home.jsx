@@ -13,16 +13,6 @@ export default function Home() {
   const Projects = lazy(() => import('../Components/Projects'));
   const Contact = lazy(() => import('../Components/Contact'));
 
-  const LoadStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100vh',
-    backgroundColor: bgColor,
-    color: color,
-    fontSize: '30px',
-  }
-
   function handleChangeMode() {
     setLightMode(!lightMode);
   }
@@ -39,7 +29,7 @@ export default function Home() {
 
   return (
     <div>
-      <Suspense fallback={<div style={LoadStyle}>Loading...</div>}>
+      <Suspense fallback={<div>Loading...</div>}>
         <NavBar lightMode={lightMode} onHandleChangeMode={handleChangeMode} bgColor={bgColor} color={color} />
         <Background bgColor={bgColor} color={color}/>
         <HomePage bgColor={bgColor} color={color}/>
