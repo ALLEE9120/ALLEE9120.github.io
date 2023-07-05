@@ -7,8 +7,12 @@ export default defineConfig({
   base: '/',
   plugins: [react()],
   build: {
-    output: {
-      format: 'module',
+    rollupOptions: {
+      output: {
+        entryFileNames: '[name]-[hash].mjs',
+        chunkFileNames: 'assets/[name]-[hash].mjs',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+      },
     },
   },
 })
