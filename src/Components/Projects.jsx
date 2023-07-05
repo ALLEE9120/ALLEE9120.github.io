@@ -35,7 +35,7 @@ export default function Projects({color, bgColor}) {
         'Javascript',
         'SCSS',
         'Vite',
-        'Heroku'
+        'Github Pages'
         ]}
         githubLink={"https://github.com/ALLEE9120/Dev-Portfolio"}
       />
