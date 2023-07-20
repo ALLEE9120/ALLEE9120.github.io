@@ -158,7 +158,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 530vh;
+  height: 510vh;
   min-width: 100vw;
   background-color: $home-background;
   z-index: -1;
@@ -589,6 +589,7 @@ input,textarea, div {
   .background-container {
     min-width: 0 !important;
     width: 100% !important;
+    height: 555vh !important;
   }
 
   .home-div {
@@ -662,5 +663,23 @@ input,textarea, div {
       width: 83% !important;
       margin: 0 !important;
     }
+  }
+}
+
+@media screen and (max-width: 658px) {
+  .background-container {
+    height: 570vh !important;
+  }
+}
+
+@media screen and (max-width: 612px) {
+  .background-container {
+    height: 595vh !important;
+  }
+}
+
+@media screen and (max-width: 571px) {
+  .background-container {
+    height: 610vh !important;
   }
 }
